@@ -7,13 +7,17 @@ OpenProject plugin adding tools helping with local development of OpenProject.
 To include this plugin in your OpenProject installation, add the following to a `Gemfile.local` file in your OpenProject root directory:
 
 ```ruby
-gem "openproject-dev_tools", git: "https://github.com/opf/openproject-dev_tools.git", branch: "main"
+group :development do
+  gem "openproject-dev_tools", git: "https://github.com/opf/openproject-dev_tools.git", branch: "main"
+end
 ```
 
 If you have checked out the plugin locally, you can reference the local path instead:
 
 ```ruby
-gem "openproject-dev_tools", path: "/path/to/openproject-dev_tools"
+group :development do
+  gem "openproject-dev_tools", path: "/path/to/openproject-dev_tools"
+end
 ```
 
 After adding the gem, run the following from your OpenProject root directory to install the plugin:
