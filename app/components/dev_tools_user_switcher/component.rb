@@ -30,14 +30,10 @@
 
 module DevToolsUserSwitcher
   class Component < ApplicationComponent
-    def render?
-      User.current.logged?
-    end
-
     def users
       @users ||= User.active
                      .not_builtin
-                     .order(:lastname, :firstname)
+                     .order(:id)
     end
 
     def current_user_name

@@ -30,9 +30,8 @@
 
 module DevTools
   class UserSwitcherController < ApplicationController
-    # No authorization required - this module only loads in development
-    # Non-admin users need to be able to switch back to admin
     no_authorization_required! :switch
+    skip_before_action :check_if_login_required
 
     def switch
       user = User.find_by(id: params[:user_id])

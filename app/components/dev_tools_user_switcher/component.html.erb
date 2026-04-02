@@ -31,8 +31,9 @@ See COPYRIGHT and LICENSE files for more details.
   render(
     Primer::Alpha::ActionMenu.new(
       classes: "op-app-menu--item",
+      style: "order: 1",
       menu_id: "op-dev-user-switcher-menu",
-      anchor_align: :end
+      select_variant: :single
     )
   ) do |menu|
     menu.with_show_button(
@@ -45,16 +46,13 @@ See COPYRIGHT and LICENSE files for more details.
       current_user_name
     end
 
-    menu.with_group do |group|
-      group.with_heading(title: I18n.t("dev_tools.user_switcher.active_users"))
-
-      users.each do |user|
-        group.with_item(
-          href: dev_tools_switch_user_path(user_id: user.id),
-          label: user.name,
-          content_arguments: { data: { "turbo-method": "post" } }
-        )
-      end
+    users.each do |user|
+      menu  .with_item(
+        href: dev_tools_switch_user_path(user_id: user.id),
+        label: user.name,
+        content_arguments: { data: { "turbo-method": "post" } },
+        active: user == User.current
+      )
     end
   end
 %>
