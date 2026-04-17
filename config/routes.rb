@@ -29,7 +29,7 @@
 #++
 
 OpenProject::Application.routes.draw do
-  scope module: :dev_tools, path: "dev_tools", as: :dev_tools do
+  namespace :dev_tools do
     match "switch_user", to: "user_switcher#switch", via: %i[get post]
   end
 end

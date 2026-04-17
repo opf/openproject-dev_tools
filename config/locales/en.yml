@@ -3,7 +3,4 @@ en:
     user_switcher:
       switched: "Switched to user: %{name}"
       user_not_found: "User not found or inactive"
-      title: "Switch User (Dev Only)"
       tooltip: "Switch User (Dev Only)"
-      heading: "Switch User (Dev Only)"
-      active_users: "Active Users"

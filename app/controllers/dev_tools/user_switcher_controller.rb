@@ -43,7 +43,7 @@ module DevTools
         flash[:error] = I18n.t("dev_tools.user_switcher.user_not_found")
       end
 
-      redirect_back_or_to root_path
+      redirect_to root_path
     end
   end
 end

@@ -39,7 +39,6 @@ module OpenProject
 
       register "openproject-dev_tools",
                author_url: "https://www.openproject.org",
-               bundled: false,
                name: "OpenProject Dev Tools"
 
       config.to_prepare do
