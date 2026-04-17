@@ -1,0 +1,6 @@
+en:
+  dev_tools:
+    user_switcher:
+      switched: "Switched to user: %{name}"
+      user_not_found: "User not found or inactive"
+      tooltip: "Switch User (Dev Only)"
