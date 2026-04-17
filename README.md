@@ -10,7 +10,7 @@ An OpenProject plugin that adds development tools to make local development easi
 
 ## Installation
 
-Add it like this to the `Gemfile.local` file:
+Add it like this to your OP `Gemfile.local` file:
 
 ```ruby
 group :development do
